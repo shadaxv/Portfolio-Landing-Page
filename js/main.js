@@ -6,6 +6,7 @@ const menuHeight = (width < 439) ? 72 : 42;
 const emValue = parseInt(window.getComputedStyle(document.getElementsByTagName("body")[0]).fontSize, 10);
 const brakeHeight = header.offsetTop - (8 * emValue);
 const menuBrakeWidth = 930;
+const scroll = document.documentElement;
 
 function mobileNoJS() {
   if (width < menuBrakeWidth) {
@@ -136,7 +137,8 @@ function preventJump(event) {
   const difference = Math.abs(document.querySelector(hash).offsetTop - window.pageYOffset);
   const duration = difference / 2;
 
-  smoothScroll(hash, duration);
+  const elementPosition = document.querySelector(hash).offsetTop;
+  smoothScroll(elementPosition, duration);
 }
 
 function smoothScroll(scrollTo, duration) {
@@ -145,12 +147,10 @@ function smoothScroll(scrollTo, duration) {
     return;
   }
 
-  const elementPosition = document.querySelector(scrollTo).offsetTop;
   let scrollFrom = window.pageYOffset;
 
-  let difference = elementPosition - scrollFrom - menuHeight;
+  let difference = scrollTo - scrollFrom - menuHeight;
   let perTick = difference / duration * 10;
-  const scroll = document.documentElement;
 
   setTimeout(function() {
     scroll.scrollTop = scroll.scrollTop + perTick;
