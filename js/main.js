@@ -1,4 +1,4 @@
-let scrollPosition = window.scrollY;
+let scrollPosition = window.pageYOffset;
 const header = document.querySelector('.main-slider__heading');
 const height = window.innerHeight;
 const width = window.innerWidth;
@@ -39,7 +39,7 @@ function changeActive() {
   window.addEventListener("scroll", position);
 
   function position() {
-    let scrollPosition = window.scrollY;
+    let scrollPosition = window.pageYOffset;
   }
   for (i in sections) {
     if (sections[i] <= scrollPosition + menuHeight) {
@@ -96,7 +96,7 @@ mobileNavigation.addEventListener('touchmove', function(event) {
 
 
 function watchScroll() {
-  scrollPosition = window.scrollY;
+  scrollPosition = window.pageYOffset;
   if (scrollPosition > brakeHeight) {
     toogleClassOnScroll(0);
   } else {
@@ -133,7 +133,7 @@ function preventJump(event) {
   }
   this.blur();
 
-  const difference = Math.abs(document.querySelector(hash).offsetTop - window.scrollY);
+  const difference = Math.abs(document.querySelector(hash).offsetTop - window.pageYOffset);
   const duration = difference / 2;
 
   smoothScroll(hash, duration);
@@ -146,7 +146,7 @@ function smoothScroll(scrollTo, duration) {
   }
 
   const elementPosition = document.querySelector(scrollTo).offsetTop;
-  let scrollFrom = window.scrollY;
+  let scrollFrom = window.pageYOffset;
   let difference = elementPosition - scrollFrom - menuHeight;
   let perTick = difference / duration * 10;
   const scroll = document.documentElement;
