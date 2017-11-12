@@ -1,5 +1,5 @@
 # Portfolio Landing Page
-My portfolio landing page - Early preview https://shadaxv.github.io/portfolio/
+My portfolio landing page
 
 
 ## Used technologies and tools
@@ -16,11 +16,11 @@ My portfolio landing page - Early preview https://shadaxv.github.io/portfolio/
 ## Live version
 
 * [shadaxv.github.io/Portfolio-Landing-Page](https://shadaxv.github.io/Portfolio-Landing-Page/)
-    
-    
+
+
 ## Release History
 
 * 1.0.1
-    * Menu edited, CV button added, page availability improved 
+    * Menu edited, CV button added, page availability improved
 * 1.0.0
     * Recreated repo, history of change has been lost
