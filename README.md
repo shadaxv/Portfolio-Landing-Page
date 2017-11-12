@@ -21,6 +21,6 @@ My portfolio landing page - Early preview https://shadaxv.github.io/portfolio/
 ## Release History
 
 * 1.0.1
-    * Menu edited, CV button added, page availability improved
+    * Menu edited, CV button added, page availability improved 
 * 1.0.0
     * Recreated repo, history of change has been lost
