@@ -15,7 +15,7 @@ My portfolio landing page - Early preview https://shadaxv.github.io/portfolio/
 
 ## Live version
 
-* [shadaxv.github.io/portfolio](https://shadaxv.github.io/portfolio/)
+* [shadaxv.github.io/Portfolio-Landing-Page](https://shadaxv.github.io/Portfolio-Landing-Page/)
     
     
 ## Release History
