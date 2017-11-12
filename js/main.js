@@ -147,6 +147,7 @@ function smoothScroll(scrollTo, duration) {
 
   const elementPosition = document.querySelector(scrollTo).offsetTop;
   let scrollFrom = window.pageYOffset;
+
   let difference = elementPosition - scrollFrom - menuHeight;
   let perTick = difference / duration * 10;
   const scroll = document.documentElement;
