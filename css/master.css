@@ -215,6 +215,9 @@
     background: white;
     color: #222;
   }
+  .main-menu__span span, .main-slider__heading span {
+    font-weight: 400;
+  }
 }
 
 @media only screen and (min-width: 960px) {
