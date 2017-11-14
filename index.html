@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
   <meta charset="utf-8">
-  <title>Niedźwiedź Aleksander - Portfolio</title>
+  <title itemprop="name">Niedźwiedź Aleksander - Portfolio</title>
   <link rel="stylesheet" href="css/master.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,11 +17,26 @@
   <meta name="theme-color" content="#222">
   <meta name="msapplication-navbutton-color" content="#222">
   <meta name="apple-mobile-web-app-status-bar-style" content="#222">
+
+  <meta itemprop="url" content="https://shadaxv.github.io/portfolio/">
+  <meta name="description" content="Moje portfolio - Aleksander Niedźwiedź">
+  <meta name="dcterms.description" lang="pl" content="Moje portfolio - Aleksander Niedźwiedź">
+  <meta name="keywords" content="Portfolio frontend backend asp net mvc javacript html5 css3 bem">
+  <meta name="dcterms.subject" lang="pl" content="Portfolio; frontend; backend; asp net mvc; javacript; html5; css3; bem">
+  <meta name="application-name" content="Aleksander Niedźwiedź - Portfolio">
+  <meta property="og:site_name" content="Aleksander Niedźwiedź - Portfolio">
+  <meta property="og:url" content="https://shadaxv.github.io/portfolio/">
+  <meta property="og:title" content="Moje portfolio - Aleksander Niedźwiedź">
+  <link rel="author" href="https://shadaxv.github.com/">
+
+  <!--[if lt IE 9]>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+	<![endif]-->
 </head>
 
 <body>
   <div class="section-divider" id="start"></div>
-  <menu class="main-menu">
+  <nav class="main-menu">
     <ul class="main-menu__list">
       <li class="main-menu__item"><span class="main-menu__span">Aleksander <span>Niedźwiedź</span></span>
       </li>
@@ -37,14 +52,14 @@
       <li class="main-menu__item--mobile"><a href="#start" class="main-menu__anchor main-menu__anchor--active" id="startAnchor">Start</a></li>
       <li class="main-menu__item--mobile"><a class="main-menu__icon"></a></li>
     </ul>
-  </menu>
+  </nav>
 
   <script type="text/javascript">
     const navigation = document.querySelector(".main-menu");
     navigation.classList.add("main-menu--on-top");
   </script>
 
-  <menu class="mobile-menu hidden">
+  <nav class="mobile-menu hidden">
     <ul class="mobile-menu__list">
       <li class="mobile-menu__item"><a href="#start" class="mobile-menu__anchor">Start</a></li>
       <li class="mobile-menu__item"><a href="#umiejetnosci" class="mobile-menu__anchor">Umiejętności</a></li>
@@ -53,7 +68,7 @@
       <li class="mobile-menu__item"><a href="#kontakt" class="mobile-menu__anchor">Kontakt</a></li>
       <li class="mobile-menu__item"><a class="mobile-menu__icon"></a></li>
     </ul>
-  </menu>
+  </nav>
 
   <header class="main-slider">
     <p class="main-slider__desc">Nazywam się</p>
@@ -64,16 +79,25 @@
   </header>
 
   <div class="section-divider" id="umiejetnosci"></div>
-  <section class="section"></section>
+  <section class="section">
+    <h2 class="section__heading">Umiejętności</h2>
+
+  </section>
 
   <div class="section-divider" id="wyksztalcenie"></div>
-  <section class="section"></section>
+  <section class="section">
+    <h2 class="section__heading">Wykształcenie</h2>
+  </section>
 
   <div class="section-divider" id="projekty"></div>
-  <section class="section"></section>
+  <section class="section">
+    <h2 class="section__heading">Projekty</h2>
+  </section>
 
   <div class="section-divider" id="kontakt"></div>
-  <section class="section"></section>
+  <section class="section">
+    <h2 class="section__heading">Kontakt</h2>
+  </section>
 
   <script src="js/main.js" charset="utf-8"></script>
 </body>

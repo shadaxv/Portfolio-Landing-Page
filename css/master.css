@@ -4,6 +4,7 @@
   html, body {
     font-family: 'Quicksand', sans-serif;
     position: relative;
+    color: #222;
   }
   .main-menu {
     position: fixed;
@@ -118,7 +119,7 @@
     padding: 15px 0;
   }
   .section {
-    min-height: 100vh;
+    min-height: calc(100vh - 42px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -236,6 +237,50 @@
     margin-left: -2.5px;
     margin-right: 2.5px;
   }
+  .main-slider {
+    position: relative;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #7b4397;
+    background: -webkit-gradient(linear, left top, right top, from(#dc2430), to(#7b4397));
+    background: linear-gradient(to right, #dc2430, #7b4397);
+  }
+  .hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .none {
+    display: none;
+  }
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section__heading {
+    font-weight: 400;
+  }
+  .section:nth-of-type(2n) {
+    background: #ccc;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .section {
+    min-height: calc(100vh - 72px);
+  }
 }
 
 @media only screen and (min-width: 960px) {
@@ -254,40 +299,4 @@
   .main-menu__list--mobile {
     display: none;
   }
-}
-
-.main-slider {
-  position: relative;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background: #7b4397;
-  background: -webkit-gradient(linear, left top, right top, from(#dc2430), to(#7b4397));
-  background: linear-gradient(to right, #dc2430, #7b4397);
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.none {
-  display: none;
-}
-
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
