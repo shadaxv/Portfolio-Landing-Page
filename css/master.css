@@ -201,7 +201,6 @@
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    max-width: 1920px;
     margin: 0 auto;
     padding: 0;
     -webkit-box-align: center;
@@ -437,5 +436,27 @@
     border: 0.104166667vw solid white;
     border-radius: 1.14583333vw;
     font-size: 0.9375vw;
+  }
+  .main-menu__span {
+    font-size: 1.375vw;
+    padding: 0 1.04166667vw;
+  }
+  .main-menu--on-top {
+    padding: 1.5625vw 0;
+  }
+  .main-menu {
+    padding: 0.78125vw 0;
+  }
+  .main-menu__anchor {
+    padding: 0.208333333vw 0.833333333vw;
+    border-radius: 0.78125vw;
+    border: 0.0520833333vw solid transparent;
+    font-size: 0.833333333vw;
+  }
+  .main-menu--on-top .main-menu__anchor--active, .main-menu--on-top .main-menu__anchor:focus {
+    border: 0.0520833333vw solid white;
+  }
+  .main-menu__anchor:hover {
+    border: 0.0520833333vw solid transparent;
   }
 }
