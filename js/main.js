@@ -2,11 +2,11 @@ let scrollPosition = window.pageYOffset;
 const header = document.querySelector('.main-slider__heading');
 const height = window.innerHeight;
 const width = window.innerWidth;
-const menuHeight = (width < 440) ? 72 : 42;
+const menuHeight = (width < 440) ? 90 : 60;
 const emValue = parseInt(window.getComputedStyle(document.getElementsByTagName("body")[0]).fontSize, 10);
-const brakeHeight = header.offsetTop - (8 * emValue);
+const brakeHeight = header.offsetTop - (10 * emValue);
 const menuBrakeWidth = 930;
-const documentBody = (document.documentElement || document.body.parentNode || document.body);
+const documentBody = (document.scrollingElement || document.documentElement || document.body.parentNode || document.body);
 
 function mobileNoJS() {
   if (width < menuBrakeWidth) {
