@@ -156,6 +156,7 @@
     justify-content: space-between;
     background: white;
     background: url(../images/b8.png);
+    padding-bottom: 5em;
   }
   .mobile-menu {
     min-height: 100vh;
@@ -341,7 +342,7 @@
     text-align: center;
   }
   .article__heading {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
   .article__icon {
     width: 72px;
@@ -366,7 +367,7 @@
     flex-direction: column;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    min-width: 500px;
+    min-width: 650px;
   }
   .timeline:after {
     content: '';
@@ -374,27 +375,51 @@
     top: 0;
     bottom: 0;
     left: 50%;
-    border-left: 2px solid red;
+    border-right: 1px solid #424242;
+    border-left: 1px solid #424242;
+    border-radius: 30%;
     -webkit-transform: translate(-50%);
     transform: translate(-50%);
   }
-  .timeline__item:first-of-type {
-    margin-top: 50px;
+  .timeline__article {
+    width: 250px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(230, 230, 230, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.24), 0 2px 2px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.24), 0 2px 2px rgba(0, 0, 0, 0.16);
   }
-  .timeline__item:last-of-type {
-    margin-bottom: 50px;
+  .timeline__article:first-of-type {
+    margin-top: 100px;
   }
-  .timeline__item {
-    width: 40%;
+  .timeline__article:last-of-type {
+    margin-bottom: 100px;
   }
-  .timeline__item--left {
+  .timeline__article--left {
     -ms-flex-item-align: start;
     align-self: flex-start;
     text-align: right;
   }
-  .timeline__item--right {
+  .timeline__article--right {
     -ms-flex-item-align: end;
     align-self: flex-end;
+    text-align: left;
+  }
+  .timeline__article--left>.article__paragraph {
+    text-align: right;
+  }
+  .timeline__article--right>.article__paragraph {
+    text-align: left;
+  }
+  .timeline__article>.article__paragraph {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+  .timeline__article>.article__heading {
+    margin-top: 0;
+    white-space: normal;
   }
 }
 
@@ -406,7 +431,7 @@
 
 @media only screen and (min-width: 856px) {
   .section__heading {
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
   .article__icon {
     width: 72px;
@@ -499,5 +524,8 @@
   }
   .main-menu__anchor:hover {
     border: 0.0520833333vw solid transparent;
+  }
+  .section__heading {
+    font-size: 1.25vw;
   }
 }
