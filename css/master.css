@@ -13,13 +13,13 @@
     right: 0;
     margin: 0 auto;
     padding: 15px 0;
-    z-index: 1;
     background: white;
     background: url(../images/b8.png);
     -webkit-transition: padding .3s linear;
     transition: padding .3s linear;
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    z-index: 10;
   }
   .main-menu__list--mobile {
     list-style: none;
@@ -334,15 +334,13 @@
     font-weight: 400;
     letter-spacing: 0.5px;
     white-space: nowrap;
+    font-size: 1.25em;
   }
   .article__paragraph {
     min-width: 160px;
     max-width: 215px;
     margin: 1em auto;
     text-align: center;
-  }
-  .article__heading {
-    font-size: 1.25em;
   }
   .article__icon {
     width: 72px;
@@ -382,14 +380,18 @@
     transform: translate(-50%);
   }
   .timeline__article {
-    width: 250px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: rgba(230, 230, 230, 0.2);
+    width: 290px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     padding: 20px;
-    border-radius: 12px;
-    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.24), 0 2px 2px rgba(0, 0, 0, 0.16);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.24), 0 2px 2px rgba(0, 0, 0, 0.16);
+    position: relative;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: rgb(255, 255, 255);
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+    border-radius: 2px;
   }
   .timeline__article:first-of-type {
     margin-top: 100px;
@@ -419,7 +421,48 @@
   }
   .timeline__article>.article__heading {
     margin-top: 0;
+    margin-bottom: 4px;
     white-space: normal;
+  }
+  .timeline__article--left>.date__span {
+    position: absolute;
+    top: 0px;
+    line-height: 16px;
+    right: -255px;
+    width: 200px;
+    text-align: left;
+  }
+  .timeline__article--right>.date__span {
+    position: absolute;
+    top: 0px;
+    line-height: 16px;
+    left: -255px;
+    width: 200px;
+    text-align: right;
+  }
+  .timeline__article--right::before, .timeline__article--left::before
+  {
+    content: ' ';
+    width: 14px;
+    height: 14px;
+    border-radius: 15px;
+    border: 2px solid #424242;
+    position: absolute;
+    background: white;
+    z-index: 1;
+  }
+  .timeline__article--left::before {
+    top: 0px;
+    right: -44px;
+  }
+  .timeline__article--right::before {
+    top: 0px;
+    left: -44px;
+  }
+  .article__category {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+    font-weight: 500;
   }
 }
 
