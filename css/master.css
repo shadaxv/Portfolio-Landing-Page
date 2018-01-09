@@ -436,7 +436,7 @@
   }
   .timeline__article--right::before, .timeline__article--left::before {
     top: -30px;
-    left: calc(-6% - 9px);
+    left: calc(-6% - 9.5px);
   }
   .article__category {
     font-size: 16px;
