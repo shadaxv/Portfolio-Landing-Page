@@ -243,7 +243,6 @@
     color: white;
     font-weight: 400;
     margin: 0.5em 0;
-    text-transform: uppercase;
     text-align: center;
     padding: 0 20px;
   }
@@ -251,9 +250,6 @@
     color: white;
     text-align: center;
     padding: 0 20px;
-  }
-  .main-slider__heading span {
-    font-weight: 500;
   }
   .main-menu__span span {
     font-weight: 400;
