@@ -283,8 +283,6 @@
     background: #232526;
     background: -webkit-gradient(linear, left top, left bottom, from(#414345), to(#232526));
     background: linear-gradient(to bottom, #414345, #232526);
-    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
   .hidden {
     opacity: 0;
@@ -342,10 +340,12 @@
     width: 72px;
     height: 72px;
   }
-  .article__icon--csharp {
-    width: 78px;
-    height: 78px;
-    margin-top: -6px;
+  .article__icon--sql {
+    width: 76px;
+    height: 76px;
+  }
+  .article__icon--sql+.article__paragraph {
+    margin-top: calc(1em - 4px);
   }
   .section__heading {
     font-size: 1.95em;
@@ -361,7 +361,7 @@
     flex-direction: column;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    width: 90%;
+    width: 95%;
     max-width: 290px;
   }
   .timeline:after {
@@ -517,6 +517,54 @@
     font-size: 14px;
     line-height: 14px;
   }
+  a[data-disabled], a[data-disabled]:hover {
+    pointer-events: none;
+    color: #9E9E9E;
+  }
+  .article__link {
+    text-decoration: none;
+    color: #1565C0;
+    font-weight: 500;
+    margin: 10px 10px 0;
+    display: inline-block;
+    text-align: center;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 4px;
+    background: #424242;
+  }
+  .progress-bar--progress {
+    height: 4px;
+    background: #F50057;
+  }
+  .progress-bar--progress[data-progress='20'] {
+    width: 20%;
+  }
+  .progress-bar--progress[data-progress='45'] {
+    width: 45%;
+  }
+  .progress-bar--progress[data-progress='60'] {
+    width: 60%;
+  }
+  .article__span {
+    font-size: 12px;
+    font-weight: 500;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .timeline {
+    max-width: 320px;
+  }
+  .timeline__article--right::before, .timeline__article--left::before {
+    left: calc(-6% - 15px);
+  }
 }
 
 @media only screen and (min-width: 592px) {
@@ -651,10 +699,12 @@
     width: 72px;
     height: 72px;
   }
-  .article__icon--csharp {
-    width: 78px;
-    height: 78px;
-    margin-top: -6px;
+  .article__icon--sql {
+    width: 76px;
+    height: 76px;
+  }
+  .article__icon--sql+.article__paragraph {
+    margin-top: calc(1em - 4px);
   }
 }
 
