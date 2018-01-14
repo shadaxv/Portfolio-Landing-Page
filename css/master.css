@@ -226,7 +226,7 @@
   .main-slider__button {
     text-decoration: none;
     color: white;
-    margin-top: 16px;
+    margin-top: 24px;
     padding: 10px 24px;
     border: 2px solid white;
     border-radius: 22px;
@@ -242,7 +242,7 @@
   .main-slider__heading {
     color: white;
     font-weight: 400;
-    margin: 0.5em 0;
+    margin: 10px auto;
     text-align: center;
     padding: 0 20px;
   }
@@ -250,6 +250,7 @@
     color: white;
     text-align: center;
     padding: 0 20px;
+    margin: 8px auto;
   }
   .main-menu__span span {
     font-weight: 400;
