@@ -154,6 +154,7 @@
   }
   .main-menu--on-bottom {
     background: #232526;
+    padding: 15px 0;
   }
   .section {
     display: -webkit-box;
