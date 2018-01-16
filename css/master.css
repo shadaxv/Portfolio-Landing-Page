@@ -518,11 +518,11 @@
   }
   .article__tag {
     display: inline-block;
-    border-radius: 2px;
+    border-radius: 3px;
     background: #3e4042;
-    padding: 2px 4px;
+    padding: 3px 5px;
     color: white;
-    margin: 3px auto;
+    margin: 3px 1px;
     font-weight: 500;
     font-size: 14px;
     line-height: 14px;
@@ -663,23 +663,11 @@
     background: white;
     color: #3e4042;
   }
-  .a123456 {
-    background: #0077B5;
-    width: 300px;
-    padding: 6px 12px;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    border-color: rgba(0, 0, 0, 0.2);
-    display: block;
-    color: white;
-    text-decoration: none;
-    text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
   .position-fixed-fix {
     display: none;
+  }
+  .contact__article .article__link {
+    color: #4794eb;
   }
 }
 
