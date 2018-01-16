@@ -5,6 +5,7 @@ const width = window.innerWidth;
 const menuHeight = (width < 440) ? 90 : 60;
 const emValue = parseInt(window.getComputedStyle(document.getElementsByTagName("body")[0]).fontSize, 10);
 const brakeHeight = header.offsetTop - (10 * emValue);
+const brakeHeight2 = document.querySelector('#kontakt').offsetTop - emValue;
 const menuBrakeWidth = 930;
 const documentBody = (document.scrollingElement || document.documentElement || document.body.parentNode || document.body);
 
@@ -63,9 +64,15 @@ function toogleClassOnScroll(add) {
   switch (add) {
     case 0:
       navigation.classList.remove("main-menu--on-top");
+      navigation.classList.remove("main-menu--on-bottom");
       break;
     case 1:
       navigation.classList.add("main-menu--on-top");
+      navigation.classList.remove("main-menu--on-bottom");
+      break;
+    case 2:
+      navigation.classList.add("main-menu--on-bottom");
+      navigation.classList.remove("main-menu--on-top");
       break;
     default:
       break;
@@ -98,7 +105,9 @@ mobileNavigation.addEventListener('touchmove', function(event) {
 
 function watchScroll() {
   scrollPosition = window.pageYOffset;
-  if (scrollPosition > brakeHeight) {
+  if (scrollPosition > brakeHeight2) {
+    toogleClassOnScroll(2);
+  } else if (scrollPosition > brakeHeight) {
     toogleClassOnScroll(0);
   } else {
     toogleClassOnScroll(1);
@@ -137,25 +146,28 @@ function preventJump(event) {
   const duration = difference / 2;
 
   const elementPosition = document.querySelector(hash).offsetTop;
-  smoothScroll(elementPosition, duration);
+  if (hash == "#kontakt") {
+    smoothScroll(elementPosition, duration, 0);
+  } else {
+    smoothScroll(elementPosition, duration, menuHeight);
+  }
 }
 
-function smoothScroll(scrollTo, duration) {
+function smoothScroll(scrollTo, duration, fixedHeight) {
   if (duration <= 0) {
     if (scrollTo == window.pageYOffset) {
       return;
     } else {
-      documentBody.scrollTop = scrollTo - menuHeight;
+      documentBody.scrollTop = scrollTo - fixedHeight;
       return;
     }
   }
-
   let scrollFrom = window.pageYOffset;
-  let difference = scrollTo - scrollFrom - menuHeight;
+  let difference = scrollTo - scrollFrom - fixedHeight;
   let perTick = difference / duration * 10;
 
   setTimeout(function() {
     documentBody.scrollTop = documentBody.scrollTop + perTick;
-    smoothScroll(scrollTo, duration - 10);
+    smoothScroll(scrollTo, duration - 10, fixedHeight);
   }, 10);
 }
