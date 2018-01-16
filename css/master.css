@@ -636,7 +636,6 @@
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    padding: 0;
   }
   .contact__article .article__paragraph:last-of-type {
     -ms-flex-preferred-size: 100%;
@@ -671,6 +670,9 @@
   .contact__article .article__link {
     color: #4794eb;
   }
+  .section:last-of-type .section__heading {
+    padding: 0;
+  }
 }
 
 @media only screen and (min-height: 700px) {
@@ -696,6 +698,9 @@
   }
   .position-fixed-fix {
     display: block;
+  }
+  .section:last-of-type .section__heading {
+    padding: 1em;
   }
 }
 
