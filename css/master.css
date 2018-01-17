@@ -537,13 +537,19 @@
     text-decoration: none;
     color: #1565C0;
     font-weight: 500;
-    margin: 10px 10px 0;
+    margin: 10px 10px -3px;
     display: inline-block;
     text-align: center;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     word-break: break-word;
     font-size: 15px;
+    transition: 0.2s all;
+    padding-bottom: 1px;
+    border-bottom: 2px solid transparent;
+  }
+  .article__link:hover {
+    border-bottom: 2px solid #1565C0;
   }
   .progress-bar {
     width: 100%;
@@ -669,6 +675,11 @@
   }
   .contact__article .article__link {
     color: #4794eb;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s all;
+  }
+  .contact__article .article__link:hover {
+    border-bottom: 2px solid #4794eb;
   }
   .section:last-of-type .section__heading {
     padding: 0;

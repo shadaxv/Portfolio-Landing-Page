@@ -171,3 +171,14 @@ function smoothScroll(scrollTo, duration, fixedHeight) {
     smoothScroll(scrollTo, duration - 10, fixedHeight);
   }, 10);
 }
+
+const fixedPositionAnchors = document.querySelectorAll(".fixed-section-link");
+const sections = document.querySelectorAll(".section");
+fixedPositionAnchors.forEach(anchor => anchor.addEventListener('focus', scrollToLastSection));
+
+function scrollToLastSection() {
+  const scrollTo = sections[(sections.length - 2)].offsetTop + sections[(sections.length - 2)].offsetHeight;
+  const scrollFrom = window.pageYOffset;
+  const difference = scrollTo - scrollFrom;
+  documentBody.scrollTop = documentBody.scrollTop + difference;
+}
