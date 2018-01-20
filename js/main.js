@@ -1,16 +1,15 @@
 let scrollPosition = window.pageYOffset;
 const header = document.querySelector('.main-slider__heading');
-const height = window.innerHeight;
-const width = window.innerWidth;
-const menuHeight = (width < 440) ? 90 : 60;
+const windowWidth = window.innerWidth;
+const menuHeight = (windowWidth < 440) ? 90 : 60;
 const emValue = parseInt(window.getComputedStyle(document.getElementsByTagName("body")[0]).fontSize, 10);
-const brakeHeight = header.offsetTop - (10 * emValue);
-const brakeHeight2 = document.querySelector('#kontakt').offsetTop - emValue;
+const headerBrakeHeight = header.offsetTop - (10 * emValue);
+const footerBrakeHeight = document.querySelector('#kontakt').offsetTop - emValue;
 const menuBrakeWidth = 930;
 const documentBody = (document.scrollingElement || document.documentElement || document.body.parentNode || document.body);
 
 function mobileNoJS() {
-  if (width < menuBrakeWidth) {
+  if (windowWidth < menuBrakeWidth) {
     document.querySelector(".main-menu__list").classList.add("none");
     document.querySelector(".main-menu__list--mobile").classList.add("flex");
   }
@@ -19,7 +18,10 @@ function mobileNoJS() {
 }
 mobileNoJS();
 
-window.addEventListener("resize", function() {
+
+window.addEventListener('resize', toogleMenu);
+
+function toogleMenu() {
   if (window.innerWidth < menuBrakeWidth) {
     document.querySelector(".main-menu__list").classList.add("none");
     document.querySelector(".main-menu__list--mobile").classList.add("flex");
@@ -28,7 +30,7 @@ window.addEventListener("resize", function() {
     document.querySelector(".main-menu__list--mobile").classList.remove("flex");
     mobileNavigation.classList.add("hidden");
   }
-});
+}
 
 function changeActive() {
   'use strict';
@@ -81,7 +83,6 @@ function toogleClassOnScroll(add) {
   }
 }
 
-
 const mobileMenuOpenButton = document.querySelector(".main-menu__icon");
 mobileMenuOpenButton.addEventListener('click', toogleClassOnClick);
 
@@ -99,17 +100,15 @@ mobileAnchors.forEach(anchor => anchor.addEventListener('click', toogleClassOnCl
 mobileAnchors.forEach(anchor => anchor.addEventListener('click', preventJump));
 
 mobileNavigation.addEventListener('touchmove', function(event) {
-
   event.preventDefault();
-
 }, false);
 
 
 function watchScroll() {
   scrollPosition = window.pageYOffset;
-  if (scrollPosition > brakeHeight2) {
+  if (scrollPosition > footerBrakeHeight) {
     toogleClassOnScroll(2);
-  } else if (scrollPosition > brakeHeight) {
+  } else if (scrollPosition > headerBrakeHeight) {
     toogleClassOnScroll(0);
   } else {
     toogleClassOnScroll(1);
@@ -118,7 +117,6 @@ function watchScroll() {
 
 window.addEventListener("scroll", watchScroll);
 window.addEventListener("scroll", changeActive);
-
 
 const anchors = document.querySelectorAll(".main-menu__anchor");
 anchors.forEach(anchor => anchor.addEventListener('click', preventJump));
@@ -132,8 +130,6 @@ function preventJump(event) {
   } else {
     location.hash = hash;
   }
-
-  //anchors.forEach(anchor => anchor.classList.remove("main-menu__anchor--active"));
 
   if (this.classList.contains("main-menu__anchor")) {
     this.classList.add("main-menu__anchor--active");
