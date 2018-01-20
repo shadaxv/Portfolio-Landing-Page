@@ -685,6 +685,9 @@
     padding: 0;
     margin: 0.6em;
   }
+  .static {
+    position: static;
+  }
 }
 
 @media only screen and (min-height: 700px) {
@@ -714,6 +717,12 @@
   .section:last-of-type .section__heading {
     padding: 1em;
     margin: 0.83em;
+  }
+  .section:last-of-type.static {
+    position: static;
+  }
+  .none {
+    display: none;
   }
 }
 
@@ -960,12 +969,4 @@
   .section__heading {
     font-size: 1.25vw;
   }
-}
-
-}
-
-}
-
-}
-
 }

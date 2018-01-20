@@ -14,6 +14,8 @@ function mobileNoJS() {
     document.querySelector(".main-menu__list").classList.add("none");
     document.querySelector(".main-menu__list--mobile").classList.add("flex");
   }
+  document.querySelector(".position-fixed-fix").classList.remove("none");
+  document.querySelector(".static").classList.remove("static");
 }
 mobileNoJS();
 
